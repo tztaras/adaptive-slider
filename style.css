@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 1000px;
+    /* width: 1000px; */
     margin: auto;
     margin-top: 100px;
     background: rgb(248, 248, 248);
@@ -22,9 +22,10 @@ h1 {
 
 
 .slider {
+    width: 400px;
     max-width: 80%;
     margin: 20px auto;
-    /* overflow: hidden; */
+    overflow: hidden;
 
 
 }
@@ -39,8 +40,8 @@ h1 {
 
 
 
-
 /* 
+
 img {
 
 

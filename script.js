@@ -46,21 +46,35 @@
 
 // ==============================код адаптивный слайдер кнопки===================================
 
-// let images = document.querySelectorAll('.slider .slider-line img');
-// let sliderLine = document.querySelector('.slider-line');
-// let count = 0;
-// let width;
+let images = document.querySelectorAll('.slider .slider-line img');
+// console.log(images.length);
+let sliderLine = document.querySelector('.slider-line');
+let count = 0;
+let width;
 
-// function init() {
-//     width = document.querySelector('.slider').offsetWidth;
-//     console.log('resize');
-//     console.log(width);
+function init() {
+    width = document.querySelector('.slider').offsetWidth;
+    console.log('resize');
+    // console.log(width);
     
-//     sliderLine.style.width = width * images.length + 'px';
-//     console.log(sliderLine.style.width);
-//     images.forEach(item => {
-//         item.style.width = width + 'px';
-//         item.style.height = 'auto';
-//     })
-// }
-// init();
+    sliderLine.style.width = width * images.length + 'px';
+    // console.log(sliderLine.style.width);
+    images.forEach(item => {
+        item.style.width = width + 'px';
+        // схранение пропорций изображений
+        item.style.height = 'auto';
+    })
+}
+
+window.addEventListener('resize', init);
+init();
+
+document.querySelector('.slider-next').addEventListener('click', function () {
+    count++;
+    rollSlider();
+});
+
+function rollSlider() {
+    //критично к пробелам 'translate(-'+count*width+'px)'
+    sliderLine.style.transform='translate(-'+count*width+'px)';
+}
