@@ -1,32 +1,32 @@
 
 // ==============================код слайдер кнопки===================================
-console.log('GREETINGS UNIVERSE!');
-let offset = 0; //смещение от левого края
-let slideWidth = 355;
-let b;
-const a = document.querySelector('.slider-line');
-document.querySelector('.slider-next').addEventListener('click', function () {
-    offset = offset + slideWidth;
-    if (offset > (slideWidth * 4)) {
-        offset = 0;
-    }
-    a.style.left = -offset + 'px';
+// console.log('GREETINGS UNIVERSE!');
+// let offset = 0; //смещение от левого края
+// let slideWidth = 355;
+// let b;
+// const a = document.querySelector('.slider-line');
+// document.querySelector('.slider-next').addEventListener('click', function () {
+//     offset = offset + slideWidth;
+//     if (offset > (slideWidth * 4)) {
+//         offset = 0;
+//     }
+//     a.style.left = -offset + 'px';
 
 
-    // width (355px) from slider css + borders (5px+5px)
-    b = document.querySelector('.slider').offsetWidth;
-    console.log(b);
-});
+//     // width (355px) from slider css + borders (5px+5px)
+//     b = document.querySelector('.slider').offsetWidth;
+//     console.log(b);
+// });
 
 
 
-document.querySelector('.slider-back').addEventListener('click', function () {
-    offset = offset - slideWidth;
-    if (offset < 0){
-        offset = slideWidth*4;
-    }
-    a.style.left = -offset + 'px';
-});
+// document.querySelector('.slider-back').addEventListener('click', function () {
+//     offset = offset - slideWidth;
+//     if (offset < 0){
+//         offset = slideWidth*4;
+//     }
+//     a.style.left = -offset + 'px';
+// });
 
 
 // Here's what happens:

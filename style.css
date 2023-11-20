@@ -1,19 +1,19 @@
 body {
-    background: rgb(255, 255, 255);
+    background: rgb(238, 238, 238);
 }
 
 .container {
     width: 1000px;
     margin: auto;
     margin-top: 100px;
-    background: whitesmoke;
+    background: rgb(248, 248, 248);
     padding-top: 5px;
 
 }
 
 h1 {
 
-    color: brown;
+    color: rgb(42, 165, 63);
 
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -22,12 +22,7 @@ h1 {
 
 
 /* .slider {
-    border: 5px solid black;
-    border-radius: 10px;
-    height: 200px;
-    width: 355px;
-    margin: auto;
-    overflow: hidden;
+   
 
 } */
 
@@ -35,13 +30,7 @@ h1 {
 
 
 /* .slider-line {
-    height: 200px;
-    width: 1775px;
-    background: rgba(230, 193, 179, 0.7);
-    display: flex;
-    position: relative;
-    border-radius: 6px;
-    transition: all ease 1s;
+ 
 }
  */
 
@@ -49,8 +38,7 @@ h1 {
 
 /* 
 img {
-    max-height: 100%;
-    max-width: 100%;
+    
 
 
     object-fit: cover;
@@ -91,7 +79,7 @@ img {
 .slider-next,
 .slider-back {
     /* background-color: rgba(214, 96, 0, 0.63); */
-    background-color: rgba(165, 42, 42, 0.808);
+    background-color: rgba(42, 165, 79, 0.808);
     color: whitesmoke;
     height: 35px;
     width: 80px;
@@ -119,5 +107,5 @@ img {
 .slider-next:active,
 .slider-back:active {
     background: black;
-    box-shadow: 0 0 5px rgba(165, 42, 42, 0.808)
+    box-shadow: 0 0 5px rgba(108, 165, 42, 0.808)
 }
