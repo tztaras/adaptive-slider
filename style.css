@@ -36,6 +36,7 @@ h1 {
 .slider-line {
     display: flex;
     background: yellowgreen;
+    transition: 0.8s;
 }
 
 

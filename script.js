@@ -47,7 +47,7 @@
 // ==============================код адаптивный слайдер кнопки===================================
 
 let images = document.querySelectorAll('.slider .slider-line img');
-// console.log(images.length);
+console.log(images.length);
 let sliderLine = document.querySelector('.slider-line');
 let count = 0;
 let width;
@@ -63,7 +63,8 @@ function init() {
         item.style.width = width + 'px';
         // схранение пропорций изображений
         item.style.height = 'auto';
-    })
+    });
+    rollSlider();
 }
 
 window.addEventListener('resize', init);
@@ -71,10 +72,22 @@ init();
 
 document.querySelector('.slider-next').addEventListener('click', function () {
     count++;
+    if (count > 4) {
+        count = images.length - 5;
+    }
     rollSlider();
 });
 
 function rollSlider() {
     //критично к пробелам 'translate(-'+count*width+'px)'
     sliderLine.style.transform='translate(-'+count*width+'px)';
-}
+} 
+
+
+document.querySelector('.slider-back').addEventListener('click', () => {
+    count = count - 1;
+    if (count < 0) {
+        count = images.length-1;
+    }
+    rollSlider();
+})
