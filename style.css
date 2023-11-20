@@ -21,30 +21,34 @@ h1 {
 
 
 
-/* .slider {
-   
-
-} */
-
-
+.slider {
+    max-width: 80%;
+    margin: 20px auto;
+    /* overflow: hidden; */
 
 
-/* .slider-line {
- 
 }
- */
+
+
+
+
+.slider-line {
+    display: flex;
+    background: yellowgreen;
+}
+
 
 
 
 /* 
 img {
-    
+
 
 
     object-fit: cover;
-}
+} */
 
-.slider img:first-child {
+/* .slider img:first-child {
     margin: 0px 72.5px 0px 72.5px;
 }
 
@@ -62,7 +66,7 @@ img {
 
 .slider img:nth-child(5) {
     margin: 0px 0px 0px 36px;
-} */
+}  */
 
 .buttons {
     margin: 20px 0px 20px 0px;
