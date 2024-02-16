@@ -87,7 +87,22 @@ function rollSlider() {
 document.querySelector('.slider-back').addEventListener('click', () => {
     count = count - 1;
     if (count < 0) {
-        count = images.length-1;
+        count = images.length - 1;
     }
     rollSlider();
-})
+});
+
+
+document.addEventListener('touchstart', handleTouchStart, false);
+
+
+let x1 = null;
+let y1 = null;
+
+function handleTouchStart(event) {
+    const firstTouch = event.touches[0];
+    console.log(firstTouch);
+    x1 = firstTouch.clientX;
+    y1 = firstTouch.clientY;
+    console.log(x1, y1);
+}
