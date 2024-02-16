@@ -94,6 +94,7 @@ document.querySelector('.slider-back').addEventListener('click', () => {
 
 
 document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
 
 
 let x1 = null;
@@ -105,4 +106,26 @@ function handleTouchStart(event) {
     x1 = firstTouch.clientX;
     y1 = firstTouch.clientY;
     console.log(x1, y1);
+};
+
+function handleTouchMove(event) {
+    if (!x1 || !y1) {
+        return false;
+    }
+    let x2 = event.touches[0].clientX;
+    let y2 = event.touches[0].clientY;
+    console.log(x2, y2);
+    let xdif = x2 - x1;
+    let ydif = y2 - y1;
+    console.log(xdif, ydif);
+
+    if (Math.abs(xdif) > Math.abs(ydif)) {
+        // right or left
+        if (xdif > 0) console.log('right');
+        else console.log('left');
+    } else {
+        // top or bottom
+        if (ydif > 0) console.log('bottom');
+        else console.log('top');
+    }
 }
